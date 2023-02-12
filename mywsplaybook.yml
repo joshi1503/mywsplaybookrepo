@@ -10,6 +10,6 @@
       name: tree
       state: present
   - name: I want to restart the apache2 servives
-  service:
-    name: apache2
-    state: restarted
+    service:
+      name: apache2
+      state: restarted
