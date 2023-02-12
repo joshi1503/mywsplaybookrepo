@@ -10,5 +10,5 @@
       name: tree
       state: present
   - service:
-    name: apache2
-    state: restarted
+      name: apache2
+      state: restarted
