@@ -9,6 +9,7 @@
     apt:
       name: tree
       state: present
-  - service:
-      name: apache2
-      state: restarted
+  - name: I want to restart the apache2 servives
+  service:
+    name: apache2
+    state: restarted
