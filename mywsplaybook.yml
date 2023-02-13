@@ -12,7 +12,7 @@
     yum:
       name: "{{mywebpackonredhat}}"
       state: present
-    when: ansible_os_family =="RHEL"
+    when: ansible_os_family =="Red Hat Enterprise Linux"
   
   - name: installing java8 on ubuntu
     apt: 
@@ -24,4 +24,4 @@
     yum:
       name: "{{myjavaonredhat}}"
       state: present
-    when: ansible_os_family =="RHEL"
+    when: ansible_os_family =="Red Hat Enterprise Linux"
