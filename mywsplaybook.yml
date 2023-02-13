@@ -3,24 +3,24 @@
   tasks: 
   - name: installing webserver
     apt: 
-      name: {{"mywebpackonubuntu"}}
+      name: "{{mywebpackonubuntu}}"
       state: present
     when: ansible_os_family =="Debian"
 
   - name: I want to install apache2 on Redhat manchine
     yum:
-      name: {{"mywebpackonredhat"}}
+      name: "{{mywebpackonredhat}}"
       state: present
     when: ansible_os_family =="Redhat"
   
   - name: installing webserver
     apt: 
-      name: {{"myjavaonubuntu"}}
+      name: "{{myjavaonubuntu}}"
       state: present
     when: ansible_os_family =="Debian"
 
   - name: I want to install apache2 on Redhat manchine
     yum:
-      name: {{"myjavaonredhat"}}
+      name: "{{myjavaonredhat}}"
       state: present
     when: ansible_os_family =="Redhat"
