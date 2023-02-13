@@ -13,13 +13,13 @@
       state: present
     when: ansible_os_family =="Redhat"
   
-  - name: installing webserver
+  - name: installing java8 on ubuntu
     apt: 
       name: "{{myjavaonubuntu}}"
       state: present
     when: ansible_os_family =="Debian"
 
-  - name: I want to install apache2 on Redhat manchine
+  - name: I want to install jav8 on Redhat manchine
     yum:
       name: "{{myjavaonredhat}}"
       state: present
