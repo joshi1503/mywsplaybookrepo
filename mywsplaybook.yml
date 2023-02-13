@@ -1,16 +1,26 @@
 ---
-- hosts: all
+- hosts: mywebservers
   tasks: 
   - name: installing webserver
     apt: 
-      name: apache2
+      name: {{"mywebpackonubuntu"}}
       state: present
-      when: ansible_os_family=="Debian"
-  - name: Installing tree
-    apt:
-      name: tree
+    when: ansible_os_family =="Debian"
+
+  - name: I want to install apache2 on Redhat manchine
+    yum:
+      name: {{"mywebpackonredhat"}}
       state: present
-  - name: I want to restart the apache2 servives
-    service:
-      name: apache2
-      state: restarted
+    when: ansible_os_family =="Redhat"
+  
+  - name: installing webserver
+    apt: 
+      name: {{"myjavaonubuntu"}}
+      state: present
+    when: ansible_os_family =="Debian"
+
+  - name: I want to install apache2 on Redhat manchine
+    yum:
+      name: {{"myjavaonredhat"}}
+      state: present
+    when: ansible_os_family =="Redhat"
