@@ -1,0 +1,8 @@
+---
+- hosts: 172.31.18.180
+  become: yes
+  tasks:
+  - name: I want to copy static data in node webpage
+    template:
+         src: mystaticfile.html
+         dest: /var/www/html/index.html
