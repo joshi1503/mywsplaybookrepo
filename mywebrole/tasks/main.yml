@@ -1,2 +1,6 @@
 ---
 # tasks file for mywebrole
+- role: 
+  apt: 
+  - name: wget
+    state: present
